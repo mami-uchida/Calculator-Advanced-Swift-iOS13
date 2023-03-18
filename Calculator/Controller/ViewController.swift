@@ -88,7 +88,8 @@ class ViewController: UIViewController {
                 }
             }
             //一つの数字を入力未完了（false）時はその値をディスプレイしていくに追加し蓄積していく
-            displayLabel.text = displayLabel.text! + numValue
+            guard let currentText = displayLabel.text else { return }
+            displayLabel.text = currentText + numValue
         }
     }
     
